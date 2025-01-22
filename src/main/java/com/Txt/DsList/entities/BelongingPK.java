@@ -2,9 +2,11 @@ package com.Txt.DsList.entities;
 
 import java.util.Objects;
 
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-
+//encapsulando dois atributos em uma classe embeddable
+@Embeddable 
 public class BelongingPK {
 	   //a interface obriga a ter apenas um id ,nao pode ser mais de um atributo
 		//criada uma chave auxiliar para representar uma chave primaria multlipla
@@ -20,6 +22,26 @@ public class BelongingPK {
 	public BelongingPK(Game game, GameList list) {
 		
 		this.game = game;
+		this.list = list;
+	}
+
+
+	public Game getGame() {
+		return game;
+	}
+
+
+	public void setGame(Game game) {
+		this.game = game;
+	}
+
+
+	public GameList getList() {
+		return list;
+	}
+
+
+	public void setList(GameList list) {
 		this.list = list;
 	}
 
