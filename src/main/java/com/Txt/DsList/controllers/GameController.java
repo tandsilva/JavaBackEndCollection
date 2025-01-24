@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Txt.DsList.dto.GameDTO;
-import com.Txt.DsList.dto.GameMinDto;
+import com.Txt.DsList.dto.GameMinDTO;
 import com.Txt.DsList.entities.Game;
 import com.Txt.DsList.service.GameService;
 @RestController
@@ -27,8 +27,8 @@ public GameDTO findById(@PathVariable Long id) {
 }
 
 @GetMapping 
-	public List<GameMinDto>findAll(){
-		List<GameMinDto>result= gameService.findAll();
+	public List<GameMinDTO>findAll(){
+		List<GameMinDTO>result= gameService.findAll();
 		return result;
 	} 
 	

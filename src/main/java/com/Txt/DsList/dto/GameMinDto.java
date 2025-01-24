@@ -1,13 +1,14 @@
 package com.Txt.DsList.dto;
 
 import com.Txt.DsList.entities.Game;
+import com.Txt.DsList.projections.GameMinProjection;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class GameMinDto {
+public class GameMinDTO {
 	
 	private Long Id;
 	private String title;
@@ -36,9 +37,9 @@ public class GameMinDto {
 		return shortDescription;
 	}
 
-	public GameMinDto() {}
+	public GameMinDTO() {}
 
-	public GameMinDto(Game entity) {
+	public GameMinDTO(Game entity) {
 	
 		Id = entity.getId();
 		title = entity.getTitle();
@@ -47,6 +48,14 @@ public class GameMinDto {
 		shortDescription = entity.getShortDescription();
 	}
 	
+	public GameMinDTO(GameMinProjection projection) {
+		
+		Id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getGameYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
+	}
 	
 	
 

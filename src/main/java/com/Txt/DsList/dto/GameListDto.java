@@ -2,16 +2,16 @@ package com.Txt.DsList.dto;
 
 import com.Txt.DsList.entities.GameList;
 
-public class GameListDto {
+public class GameListDTO {
 	private Long id;
 	private String name;
 	
 	
-	public GameListDto() {
+	public GameListDTO() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public GameListDto(GameList entity) {
+	public GameListDTO(GameList entity) {
 		id = entity.getId();
 		name = entity.getName();
 	}

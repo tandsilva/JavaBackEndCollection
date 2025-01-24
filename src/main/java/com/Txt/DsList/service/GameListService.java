@@ -9,42 +9,37 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.Txt.DsList.dto.GameDTO;
-import com.Txt.DsList.dto.GameListDto;
-import com.Txt.DsList.dto.GameMinDto;
-import com.Txt.DsList.entities.Game;
+import com.Txt.DsList.dto.GameListDTO;
 import com.Txt.DsList.entities.GameList;
-
+import com.Txt.DsList.projections.GameMinProjection;
 import com.Txt.DsList.repositories.GameListRepository;
+import com.Txt.DsList.repositories.GameRepository;
 
 @Service
 public class GameListService {
+
 	@Autowired
 	private GameListRepository gameListRepository;
-//	@Transactional(readOnly = true)
-//	public GameDTO findById(Long id) {
-//		Game result = gameRepository.findById(id).get();
-//		GameDTO  dto= new GameDTO(result);
-//		return dto;
-//	
-//	}    
-//	@Transactional(readOnly = true)
-//	public GameDTO findById(Long id) {
-//	    Optional<Game> result = gameRepository.findById(id);
-//	    
-//	    return result.map(game -> new GameDTO(game))
-//	                 .orElse(null); // Retorna null caso o Game não seja encontrado
-//	}
+	
+	@Autowired
+	private GameRepository gameRepository;
+	
+	@Transactional(readOnly = true)
+	public List<GameListDTO> findAll() {
+		List<GameList> result = gameListRepository.findAll();
+		return result.stream().map(GameListDTO::new).toList();
+	}
+	
+	
+	
+
+
 
 
 	@Transactional(readOnly = true)
-	public List<GameListDto> findAll(){
-	List<GameList> result= gameListRepository.findAll();
-	return  result.stream().map(x-> new GameListDto(x)).toList();
-			
+	public GameListDTO findById(Long id) {
+		GameList entity = gameListRepository.findById(id).get();
+		return new GameListDTO(entity);
+	}
 }
-	
-	
-	
-	
-	
-}
+
