@@ -3,11 +3,6 @@ package com.Txt.DsList.dto;
 import com.Txt.DsList.entities.Game;
 import com.Txt.DsList.projections.GameMinProjection;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 public class GameMinDTO {
 	
 	private Long Id;
