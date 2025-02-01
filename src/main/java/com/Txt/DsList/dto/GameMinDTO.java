@@ -1,4 +1,4 @@
-package com.Txt.DsList.DTO;
+package com.Txt.DsList.dto;
 
 import com.Txt.DsList.entities.Game;
 import com.Txt.DsList.projections.GameMinProjection;
