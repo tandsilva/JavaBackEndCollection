@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.Txt.DsList.dto.GameListDTO;
 import com.Txt.DsList.entities.GameList;
 import com.Txt.DsList.repositories.GameListRepository;
-import com.Txt.DsList.repositories.GameRepository;
 
 @Service
 public class GameListService {
