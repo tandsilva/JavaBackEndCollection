@@ -3,7 +3,12 @@ package com.Txt.DsList.exceptions;
 
 
 	public class GameNotFoundException extends RuntimeException {
-	    // Construtor que recebe uma mensagem de erro
+	    /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		// Construtor que recebe uma mensagem de erro
 	    public GameNotFoundException(String message) {
 	        super(message);
 	    }
@@ -12,7 +17,7 @@ package com.Txt.DsList.exceptions;
 	    public GameNotFoundException(String message, Throwable cause) {
 	        super(message, cause);
 	    }
-	    //execoes
+	   
 	}
 
 

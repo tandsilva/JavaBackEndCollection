@@ -5,7 +5,6 @@ import java.util.Objects;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.persistence.TableGenerator;
 @Entity 
 @Table(name = "tb_belonging")
 public class Belonging {
