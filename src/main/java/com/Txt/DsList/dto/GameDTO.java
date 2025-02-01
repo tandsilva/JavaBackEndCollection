@@ -1,4 +1,4 @@
-package com.Txt.DsList.dto;
+package com.Txt.DsList.DTO;
 
 import org.springframework.beans.BeanUtils;
 

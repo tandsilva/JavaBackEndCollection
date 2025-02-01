@@ -1,4 +1,4 @@
-package com.Txt.DsList.dto;
+package com.Txt.DsList.DTO;
 
 import com.Txt.DsList.entities.GameList;
 
