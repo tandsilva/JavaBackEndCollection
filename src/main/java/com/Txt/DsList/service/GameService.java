@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.Txt.DsList.DTO.GameDTO;
-import com.Txt.DsList.DTO.GameMinDTO;
+import com.Txt.DsList.dto.GameDTO;
+import com.Txt.DsList.dto.GameMinDTO;
 import com.Txt.DsList.entities.Game;
 import com.Txt.DsList.exceptions.GameNotFoundException;
 import com.Txt.DsList.projections.GameMinProjection;
