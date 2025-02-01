@@ -19,7 +19,7 @@ public class GameListService {
 	private GameListRepository gameListRepository;
 	
 	@Autowired
-	private GameRepository gameRepository;
+//	private GameRepository gameRepository;
 	
 	@Transactional(readOnly = true)
 	public List<GameListDTO> findAll() {
