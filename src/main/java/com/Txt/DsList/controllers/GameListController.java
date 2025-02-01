@@ -36,7 +36,7 @@ private GameService gameService;
 //concatenando id da lista / games
 @GetMapping(value = "/{listId}/games")
 public List<GameMinDTO>findByList(@PathVariable Long listId){
-	List<GameMinDTO>result= gameService.findByList(listId);
+	List<GameMinDTO>result= gameService.findByGameList(listId);
 	return result;
 } 
 	
